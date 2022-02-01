@@ -10,6 +10,9 @@ Makefile
 _out64
 out32/*
 out64/*
+*.x86_64
+*.arm64
+*.dSYM/*
 *.pyc
 build
 build32
