@@ -37,7 +37,6 @@ double parseDouble(char* p) {
 
 int main(int argc, char* argv[]) {
   double width, height, perimeter, area;
-  printf("ERR_PARSE: %hi\n", ERR_PARSE);
   printf("Found %d args\n", argc - 1);
 
   if (argc == 3) {
