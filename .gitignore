@@ -20,6 +20,10 @@ build32
 dbuild
 build-android/external
 .DS_Store
+# XCode user settings
+c-variables-and-data-types.xcodeproj/xcuserdata/*
+.xcode.xcworkspace/xcuserdata/*
+c-variables-and-data-types.xcodeproj/project.xcworkspace/xcuserdata/*
 # Project binaries
 cidr_ranges
 test-vars
