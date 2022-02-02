@@ -13,8 +13,8 @@ int main(void) {
   enum companies yourCompany = XEROX;
   enum companies myCompany = GOOGLE;
   enum companies theirCompany = EBAY;
-  printf("%i\n", yourCompany);
-  printf("%i\n", myCompany);
-  printf("%i\n", theirCompany);
+  printf("The value of xerox is:  %i\n", yourCompany);
+  printf("The value of google is: %i\n", myCompany);
+  printf("The value of ebay is:   %i\n", theirCompany);
   return 0;
 }
