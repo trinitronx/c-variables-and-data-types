@@ -1,22 +1,24 @@
 /*
-* Author: James Cuzella
-* Purpose: This program uses basic data types
-* 
-*/
-#include <stdio.h>
+ * Author: James Cuzella
+ * Copyright 2022 James Cuzella
+ * Purpose: This program uses basic data types
+ *
+ */
+
 #include <stdbool.h>
+#include <stdio.h>
 
 int main(void) {
   int integerVar = 100;
-  short int shortIntVar = 30;
+  short int shortIntVar = 30;  // NOLINT
   signed int signedIntVar = -99;
-  signed short int signedIntShortVar = -1;
+  signed short int signedIntShortVar = -1;  // NOLINT
   unsigned int unsignedIntVar = 1;
-  unsigned short int unsignedShortIntVar = 2;
-  long int longIntVar = 122L;
-  long long int longLongIntVar = 500ll;
-  unsigned long int unsignedLongIntVar = 122e15L;
-  unsigned long long int unsignedLongLongIntVar = 12ull;
+  unsigned short int unsignedShortIntVar = 2;             // NOLINT
+  long int longIntVar = 122L;                             // NOLINT
+  long long int longLongIntVar = 500ll;                   // NOLINT
+  unsigned long int unsignedLongIntVar = 122e15L;         // NOLINT
+  unsigned long long int unsignedLongLongIntVar = 12ull;  // NOLINT
   float floatingVar = 331.7900000;
   double doubleVar = 8.44e+11;
   long double longDoubleVar = 3.1e-51;
@@ -27,21 +29,31 @@ int main(void) {
 
   enum primaryColor { red, yellow, blue };
   enum primaryColor myColor = red, yourColor = blue;
-  enum month { January = 1, February, March, April, May, June, July, August, September, October, November, December };
+  enum month {
+    January = 1,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+  };
   enum month thisMonth = February;
   enum direction { up, down, left = 10, right };
   enum direction myDirection = left;
   enum direction yourDirection = right;
 
-  char* myString = "hello world";
+  char *myString = "hello world";
 
   printf("integerVar = %i\n", integerVar);
   printf("integerVar %%x (0x__) = %x\n", integerVar);
   printf("integerVar %%o (0o__) = %o\n", integerVar);
   printf("shortIntVar %%hi = %hi\n", shortIntVar);
-  printf("shortIntVar %%hx (0x_[a-f]_) = %hx\n", shortIntVar);
-  printf("shortIntVar %%hX (0X_[A-F]_) = %hX\n", shortIntVar);
-  printf("shortIntVar %%ho (0o_______) = %ho\n", shortIntVar);
   printf("longIntVar %%li (_________) = %li\n", longIntVar);
   printf("longIntVar %%lo (0o_______) = %lo\n", longIntVar);
   printf("longIntVar %%lx (0x_______) = %lx\n", longIntVar);
@@ -51,12 +63,14 @@ int main(void) {
   printf("unsignedLongIntVar %%lX (0X_______) = %lX\n", unsignedLongIntVar);
   printf("unsignedLongIntVar %%lo (0o_______) = %lu\n", unsignedLongIntVar);
   printf("longLongIntVar %%lli (_________) = %lli\n", longLongIntVar);
-  printf("longLongIntVar %%llu (_________) = %llu\n", longLongIntVar);
   printf("longLongIntVar %%llx (0x_______) = %llx\n", longLongIntVar);
   printf("longLongIntVar %%llo (0o_______) = %llo\n", longLongIntVar);
-  printf("unsignedLongLongIntVar %%llu (_________) = %llu\n", unsignedLongLongIntVar);
-  printf("unsignedLongLongIntVar %%llx (0x_______) = %llx\n", unsignedLongLongIntVar);
-  printf("unsignedLongLongIntVar %%llo (0o_______) = %llo\n", unsignedLongLongIntVar);
+  printf("unsignedLongLongIntVar %%llu (_________) = %llu\n",
+         unsignedLongLongIntVar);
+  printf("unsignedLongLongIntVar %%llx (0x_______) = %llx\n",
+         unsignedLongLongIntVar);
+  printf("unsignedLongLongIntVar %%llo (0o_______) = %llo\n",
+         unsignedLongLongIntVar);
   printf("floatingVar = %f\n", floatingVar);
   printf("floatingVar %%e = %e\n", floatingVar);
   printf("floatingVar %%E = %E\n", floatingVar);
@@ -81,7 +95,10 @@ int main(void) {
   printf("signedIntShortVar = %hi\n", signedIntShortVar);
   printf("unsignedIntVar = %u\n", unsignedIntVar);
   printf("unsignedShortIntVar = %hu\n", unsignedShortIntVar);
-  
+  printf("unsignedShortIntVar %%hx (0x_[a-f]_) = %hx\n", unsignedShortIntVar);
+  printf("unsignedShortIntVar %%hX (0X_[A-F]_) = %hX\n", unsignedShortIntVar);
+  printf("unsignedShortIntVar %%ho (0o_______) = %ho\n", unsignedShortIntVar);
+
   printf("boolVar = %i\n", boolVar);
   printf("newBool = %i\n", newBool);
   printf("newBool %%u = %u\n", newBool);

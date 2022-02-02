@@ -1,15 +1,16 @@
 /*
-* Author: James Cuzella
-* Purpose: This program handles basic command line args
-* Date: 2022-02-01
-*/
+ * Author: James Cuzella
+ * Copyright 2022 James Cuzella
+ * Purpose: This program handles basic command line args
+ * Date: 2022-02-01
+ */
 
 #include <stdio.h>
 
-int main(int argc, char* argv[]) {
+int main(int argc, const char* argv[]) {
   int numberOfArguments = argc;
-  char* argument0 = argv[0];
-  char* argument1 = argv[1];
+  const char* argument0 = argv[0];
+  const char* argument1 = argv[1];
 
   printf("Number of Arguments: %d\n", numberOfArguments);
   printf("Argument 0 is the program name: %s\n", argument0);
