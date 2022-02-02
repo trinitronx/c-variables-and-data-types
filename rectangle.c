@@ -17,7 +17,7 @@
 
 const char* red = "\033[0;31m";
 const char* reset = "\033[0m";
-const unsigned short int ERR_PARSE = -1;  // NOLINT / ERR_PARSE = 65535
+const signed short int ERR_PARSE = -1;  // NOLINT / ERR_PARSE = -1
 
 double parseDouble(char* p) {
   while (*p) {  // While there are more characters to process...
@@ -37,13 +37,13 @@ double parseDouble(char* p) {
 
 int main(int argc, char* argv[]) {
   double width, height, perimeter, area;
-  printf("ERR_PARSE: %u\n", ERR_PARSE);
+  printf("ERR_PARSE: %hi\n", ERR_PARSE);
   printf("Found %d args\n", argc - 1);
 
   if (argc == 3) {
     height = parseDouble(argv[1]);
     width = parseDouble(argv[2]);
-    if (height == ERR_PARSE || width == ERR_PARSE) {
+    if (height <= ERR_PARSE || width <= ERR_PARSE) {
       printf("%sERROR:%s Invalid input!\n", red, reset);
       return 2;
     }
