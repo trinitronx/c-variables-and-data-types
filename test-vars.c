@@ -25,7 +25,19 @@ int main(void) {
   _Bool boolVar = 0;
   bool newBool = true;
 
+  enum primaryColor { red, yellow, blue };
+  enum primaryColor myColor = red, yourColor = blue;
+  enum month { January = 1, February, March, April, May, June, July, August, September, October, November, December };
+  enum month thisMonth = February;
+  enum direction { up, down, left = 10, right };
+  enum direction myDirection = left;
+  enum direction yourDirection = right;
+
+  char* myString = "hello world";
+
   printf("integerVar = %i\n", integerVar);
+  printf("integerVar %%x (0x__) = %x\n", integerVar);
+  printf("integerVar %%o (0o__) = %o\n", integerVar);
   printf("shortIntVar %%hi = %hi\n", shortIntVar);
   printf("shortIntVar %%hx (0x_[a-f]_) = %hx\n", shortIntVar);
   printf("shortIntVar %%hX (0X_[A-F]_) = %hX\n", shortIntVar);
@@ -38,6 +50,7 @@ int main(void) {
   printf("unsignedLongIntVar %%lx (0x_______) = %lx\n", unsignedLongIntVar);
   printf("unsignedLongIntVar %%lX (0X_______) = %lX\n", unsignedLongIntVar);
   printf("unsignedLongIntVar %%lo (0o_______) = %lu\n", unsignedLongIntVar);
+  printf("longLongIntVar %%lli (_________) = %lli\n", longLongIntVar);
   printf("longLongIntVar %%llu (_________) = %llu\n", longLongIntVar);
   printf("longLongIntVar %%llx (0x_______) = %llx\n", longLongIntVar);
   printf("longLongIntVar %%llo (0o_______) = %llo\n", longLongIntVar);
@@ -73,5 +86,13 @@ int main(void) {
   printf("newBool = %i\n", newBool);
   printf("newBool %%u = %u\n", newBool);
 
+  printf("myColor %%i = %i\n", myColor);
+
+  printf("yourColor %%i = %i\n", yourColor);
+  printf("thisMonth %%i = %i\n", thisMonth);
+  printf("myDirection %%i = %i\n", myDirection);
+  printf("yourDirection %%i = %i\n", yourDirection);
+
+  printf("myString = %s", myString);
   return 0;
 }
