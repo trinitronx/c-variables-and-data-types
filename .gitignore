@@ -20,3 +20,8 @@ build32
 dbuild
 build-android/external
 .DS_Store
+# Project binaries
+cidr_ranges
+test-vars
+test-args
+rectangle
