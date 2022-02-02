@@ -25,3 +25,4 @@ cidr_ranges
 test-vars
 test-args
 rectangle
+enum-test
