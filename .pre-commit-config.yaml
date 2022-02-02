@@ -34,7 +34,7 @@ repos:
     - id: clang-format
       args: [--style=Google]
     - id: oclint
-      args: [-p=build]
+      args: [-p=build,--extra-arg=-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/]
     - id: uncrustify
     - id: cppcheck
     - id: cpplint
