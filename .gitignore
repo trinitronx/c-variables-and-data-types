@@ -12,6 +12,7 @@ out32/*
 out64/*
 *.x86_64
 *.arm64
+*.arm-linux-gnueabihf
 *.plist
 *.dSYM/*
 *.pyc
