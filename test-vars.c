@@ -7,6 +7,7 @@
 
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdint.h>
 
 int main(void) {
   int integerVar = 100;
@@ -19,6 +20,7 @@ int main(void) {
   long long int longLongIntVar = 500ll;                   // NOLINT
   unsigned long int unsignedLongIntVar = 122e15L;         // NOLINT
   unsigned long long int unsignedLongLongIntVar = 12ull;  // NOLINT
+  uint32_t uInt32Var = 0x3a3a3a;
   float floatingVar = 331.7900000;
   double doubleVar = 8.44e+11;
   long double longDoubleVar = 3.1e-51;
@@ -71,6 +73,10 @@ int main(void) {
          unsignedLongLongIntVar);
   printf("unsignedLongLongIntVar %%llo (0o_______) = %llo\n",
          unsignedLongLongIntVar);
+  printf("uInt32Var %%lli (_________) = %lli\n", uInt32Var);
+  printf("uInt32Var %%llx (0x_______) = %llx\n", uInt32Var);
+  printf("uInt32Var %%llo (0o_______) = %llo\n", uInt32Var);
+  printf("uInt32Var %%llu (_________) = %llu\n", uInt32Var);
   printf("floatingVar = %f\n", floatingVar);
   printf("floatingVar %%e = %e\n", floatingVar);
   printf("floatingVar %%E = %E\n", floatingVar);
